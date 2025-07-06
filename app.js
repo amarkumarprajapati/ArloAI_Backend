@@ -9,6 +9,16 @@ const PORT = process.env.PORT || 3000;
 // Connect to MongoDB
 connectDB();
 
+
+app.get('/', (req, res) => {
+  res.send('ArloAI Backend is running');
+});
+
+
+
+
+
+
 // Middleware
 app.use(express.json());
 
