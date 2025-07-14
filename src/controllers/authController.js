@@ -1,11 +1,12 @@
 const userService = require('../services/userService');
 const User = require('../models/User');
-require('dotenv').config();
 const jwt = require('jsonwebtoken');
 const { pipeline } = require('@xenova/transformers');
 
 
 const userAuth = {};
+
+JWT_EXPIRES_IN = 70000
 
 
 userAuth.signUp = async (req, res) => {
