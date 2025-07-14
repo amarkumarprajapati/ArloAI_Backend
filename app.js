@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const connectDB = require('./src/config/db');
 const authRoutes = require('./src/routes/auth');
+const textGenRoutes = require('./src/routes/textGenRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 8000;
@@ -24,6 +25,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api', textGenRoutes);
 
 // Root endpoint
 app.get('/', (req, res) => {
